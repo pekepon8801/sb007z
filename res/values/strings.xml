@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">007z Reconnecter</string>
+    <string name="pref_serviceTimer_title">Service Timer</string>
+    <string name="pref_serviceTimer_summary">Service execute timer</string>
+    <string name="title_activity_prefs">007z Reconnecter setting</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_ppp_unknown">PPP unknown</string>
+    <string name="text_ppp_connected">PPP connected</string>
+    <string name="text_ppp_disconnected">PPP disconnected</string>
+    <string name="service_scheduled">Cancel service</string>
+    <string name="service_not_scheduled">Schedule service</string>
+    <string name="button_get_status">Get router status</string>
+    
+</resources>

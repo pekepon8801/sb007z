@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">007z Reconnecter</string>
+    <string name="pref_serviceTimer_title">チェック間隔</string>
+    <string name="pref_serviceTimer_summary">切断をチェックする間隔を秒で指定します</string>
+    <string name="title_activity_prefs">007z Reconnecter 設定</string>
+    <string name="action_settings">設定</string>
+    <string name="text_ppp_unknown">PPP状態不明</string>
+    <string name="text_ppp_connected">PPP接続中</string>
+    <string name="text_ppp_disconnected">PPP切断中</string>
+    <string name="service_scheduled">再接続サービス停止</string>
+    <string name="service_not_scheduled">再接続サービス起動</string>
+    <string name="button_get_status">現在の状態を取得</string>
+    
+</resources>
