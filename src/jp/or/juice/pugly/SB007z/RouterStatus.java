@@ -1,4 +1,4 @@
-package com.example.firstapp;
+package jp.or.juice.pugly.SB007z;
 
 import java.io.BufferedReader;
 import java.io.StringReader;

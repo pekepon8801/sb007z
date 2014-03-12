@@ -1,6 +1,9 @@
-package com.example.firstapp;
+package jp.or.juice.pugly.SB007z;
 
 import java.io.IOException;
+
+import jp.or.juice.pugly.SB007z.R;
+
 
 import android.app.Activity;
 import android.app.AlarmManager;

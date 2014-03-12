@@ -1,4 +1,6 @@
-package com.example.firstapp;
+package jp.or.juice.pugly.SB007z;
+
+import jp.or.juice.pugly.SB007z.R;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

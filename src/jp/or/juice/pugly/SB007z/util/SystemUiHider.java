@@ -1,4 +1,4 @@
-package com.example.firstapp.util;
+package jp.or.juice.pugly.SB007z.util;
 
 import android.app.Activity;
 import android.os.Build;
