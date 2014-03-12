@@ -54,10 +54,10 @@ public class RouterStatusService extends IntentService {
     	 
     	NotificationCompat.Builder nb = new NotificationCompat.Builder(getApplicationContext());
     	nb.setContentIntent(pi);
-    	nb.setTicker("007z - ÄÚ‘±‚µ‚Ü‚·");
+    	nb.setTicker(getResources().getString(R.string.notify_ticker));
     	nb.setSmallIcon(R.drawable.ic_launcher);
-    	nb.setContentTitle("007z Reconnecter");
-    	nb.setContentText("Ø’f‚ğŒŸ’m‚µ‚½‚½‚ßAÄÚ‘±‚µ‚Ü‚·B");
+    	nb.setContentTitle(getResources().getString(R.string.app_name));
+    	nb.setContentText(getResources().getString(R.string.notify_content_text));
     	//nb.setLargeIcon(icon);
     	nb.setWhen(System.currentTimeMillis());
     	nb.setDefaults(Notification.DEFAULT_SOUND);

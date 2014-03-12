@@ -12,5 +12,9 @@
     <string name="service_scheduled">Cancel service</string>
     <string name="service_not_scheduled">Schedule service</string>
     <string name="button_get_status">Get router status</string>
-    
+	<string name="notify_ticker">007z - Try reconnect</string>
+	<string name="notify_content_text">Disconneced. Try reconnect.</string>
+	<string name="actionbar_setting">Preference</string>
+	<string name="actionbar_refresh">Refresh</string>
+
 </resources>

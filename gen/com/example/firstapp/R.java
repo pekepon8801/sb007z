@@ -35,9 +35,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0003;
-        public static final int button1=0x7f0a0001;
-        public static final int button_service_schedule=0x7f0a0002;
+        public static final int action_settings=0x7f0a0002;
+        public static final int button_service_schedule=0x7f0a0001;
         public static final int ppp_status=0x7f0a0000;
     }
     public static final class layout {
@@ -48,8 +47,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     }
     public static final class string {
         public static final int action_settings=0x7f070004;
+        public static final int actionbar_refresh=0x7f07000e;
+        public static final int actionbar_setting=0x7f07000d;
         public static final int app_name=0x7f070000;
         public static final int button_get_status=0x7f07000a;
+        public static final int notify_content_text=0x7f07000c;
+        public static final int notify_ticker=0x7f07000b;
         public static final int pref_serviceTimer_summary=0x7f070002;
         public static final int pref_serviceTimer_title=0x7f070001;
         public static final int service_not_scheduled=0x7f070009;

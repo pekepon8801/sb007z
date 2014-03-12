@@ -43,13 +43,10 @@ public class FullscreenActivity extends Activity implements OnClickListener{
         super.onCreate(savedInstanceState);
 
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
-        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+        //requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_fullscreen);
 
         this.prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        
-        Button btn1 = (Button)findViewById(R.id.button1);
-        btn1.setOnClickListener(this);
         
         serviceScheduleButton = (Button)findViewById(R.id.button_service_schedule);
         serviceScheduleButton.setOnClickListener(this);
@@ -84,22 +81,22 @@ public class FullscreenActivity extends Activity implements OnClickListener{
 		LinearLayout.LayoutParams flp = new LinearLayout.LayoutParams(64, -2, 0x11);
 		fl.setLayoutParams(flp);
 		
-		this.refreshMenuItem = menu.add(0, 1, Menu.NONE, "�ݒ�");
+		this.refreshMenuItem = menu.add(0, 1, Menu.NONE, getResources().getString(R.string.actionbar_refresh));
 		this.refreshMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 		String idString = "@*android:drawable/ic_menu_refresh";
 		int id = getResources().getIdentifier(idString, null, null);
 		this.refreshMenuItem.setIcon(id);
 
-		this.executingMenuItem = menu.add(0, 0, Menu.NONE, "�ݒ�");
+		this.executingMenuItem = menu.add(0, 0, Menu.NONE, getResources().getString(R.string.actionbar_refresh));
 		this.executingMenuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 		ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(40, 40);
 		ProgressBar pb = new ProgressBar(this, null, android.R.attr.progressBarStyle);
 		pb.setLayoutParams(lp);
 		fl.addView(pb);
 		this.executingMenuItem.setActionView(fl);
-		this.executingMenuItem.setVisible(true);
+		this.executingMenuItem.setVisible(false);
 		
-		MenuItem mi = menu.add(0, 2, Menu.NONE, "�ݒ�");
+		MenuItem mi = menu.add(0, 2, Menu.NONE, getResources().getString(R.string.actionbar_setting));
 		mi.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
 		mi.setIcon(android.R.drawable.ic_menu_preferences);
 		
@@ -124,12 +121,7 @@ public class FullscreenActivity extends Activity implements OnClickListener{
 	}
 
 	public void onClick(View v) {
-        if (v.getId() == R.id.button1) {
-			this.refreshMenuItem.setVisible(false);
-        	this.setProgressBarIndeterminateVisibility(true);
-        	new RouterTask(this).execute("");
-
-        } else if (v.getId() == R.id.button_service_schedule) {
+		if (v.getId() == R.id.button_service_schedule) {
         	if (isScheduleService()) {
             	cancelService();
         		this.serviceScheduleButton.setText(getResources().getString(R.string.service_not_scheduled));

@@ -12,5 +12,9 @@
     <string name="service_scheduled">再接続サービス停止</string>
     <string name="service_not_scheduled">再接続サービス起動</string>
     <string name="button_get_status">現在の状態を取得</string>
-    
+    <string name="notify_ticker">007z - 再接続します</string>
+	<string name="notify_content_text">切断を検知したため、再接続します。</string>
+	<string name="actionbar_setting">設定変更</string>
+	<string name="actionbar_refresh">ルータ状態取得</string>
+	
 </resources>
