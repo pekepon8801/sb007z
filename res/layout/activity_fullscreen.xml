@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+	android:scrollbarAlwaysDrawVerticalTrack="true"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#000000"
@@ -33,6 +34,409 @@
             android:layout_height="wrap_content"
             android:text="@string/text_ppp_unknown" />
 
+		<ScrollView android:id="@+id/ScrollView01"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TableRow>
+                <TextView
+                    android:id="@+id/signalbar_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_signalbar_label" />
+                <TextView
+                    android:id="@+id/signalbar_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/network_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_network_type_label" />
+                <TextView
+                    android:id="@+id/network_type_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/network_provider_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_network_provider_label" />
+                <TextView
+                    android:id="@+id/network_provider_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/ppp_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_ppp_status_label" />
+                <TextView
+                    android:id="@+id/ppp_status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/modem_main_state_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_modem_main_state_label" />
+                <TextView
+                    android:id="@+id/modem_main_state_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/sms_unread_count_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_sms_unread_count_label" />
+                <TextView
+                    android:id="@+id/sms_unread_count_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/wifi_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_wifi_status_label" />
+                <TextView
+                    android:id="@+id/wifi_status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/wifi_access_count_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_wifi_access_count_label" />
+                <TextView
+                    android:id="@+id/wifi_access_count_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/battery_charging_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_battery_charging_label" />
+                <TextView
+                    android:id="@+id/battery_charging_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/battery_value_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_battery_value_label" />
+                <TextView
+                    android:id="@+id/battery_value_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/new_message_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_new_message_label" />
+                <TextView
+                    android:id="@+id/new_message_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/message_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_message_status_label" />
+                <TextView
+                    android:id="@+id/message_status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/login_info_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_login_info_label" />
+                <TextView
+                    android:id="@+id/login_info_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/host_phone_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_host_phone_label" />
+                <TextView
+                    android:id="@+id/host_phone_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/wan_ipaddr_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_wan_ipaddr_label" />
+                <TextView
+                    android:id="@+id/wan_ipaddr_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/dns_mode_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dns_mode_label" />
+                <TextView
+                    android:id="@+id/dns_mode_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/prefer_dns_manual_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_prefer_dns_manual_label" />
+                <TextView
+                    android:id="@+id/prefer_dns_manual_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/standby_dns_manual_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_standby_dns_manual_label" />
+                <TextView
+                    android:id="@+id/standby_dns_manual_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/prefer_dns_auto_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_prefer_dns_auto_label" />
+                <TextView
+                    android:id="@+id/prefer_dns_auto_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/standby_dns_auto_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_standby_dns_auto_label" />
+                <TextView
+                    android:id="@+id/standby_dns_auto_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/SSID1_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_SSID1_label" />
+                <TextView
+                    android:id="@+id/SSID1_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/Channel_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_Channel_label" />
+                <TextView
+                    android:id="@+id/Channel_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/EncrypType_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_EncrypType_label" />
+                <TextView
+                    android:id="@+id/EncrypType_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/AuthMode_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_AuthMode_label" />
+                <TextView
+                    android:id="@+id/AuthMode_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/WscModeOption_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_WscModeOption_label" />
+                <TextView
+                    android:id="@+id/WscModeOption_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/AuthMode_tmp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_AuthMode_tmp_label" />
+                <TextView
+                    android:id="@+id/AuthMode_tmp_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/lan_ipaddr_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_lan_ipaddr_label" />
+                <TextView
+                    android:id="@+id/lan_ipaddr_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/lan_netmask_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_lan_netmask_label" />
+                <TextView
+                    android:id="@+id/lan_netmask_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/dhcpEnabled_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_dhcpEnabled_label" />
+                <TextView
+                    android:id="@+id/dhcpEnabled_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/sw_outer_version_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_sw_outer_version_label" />
+                <TextView
+                    android:id="@+id/sw_outer_version_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/hardware_version_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_hardware_version_label" />
+                <TextView
+                    android:id="@+id/hardware_version_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/pin_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_pin_status_label" />
+                <TextView
+                    android:id="@+id/pin_status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/lucknum_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_lucknum_label" />
+                <TextView
+                    android:id="@+id/lucknum_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+        </TableLayout>
+		</ScrollView>
     </LinearLayout>
 
 </FrameLayout>

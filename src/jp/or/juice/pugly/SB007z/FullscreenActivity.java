@@ -172,8 +172,44 @@ public class FullscreenActivity extends Activity implements OnClickListener{
 	    		PendingIntent.FLAG_NO_CREATE);
     	return (pendingIntent != null);
     }
+
+	private void dispRouterStatus(RouterStatus rs) {
+		((TextView)findViewById(R.id.signalbar_value)).setText(rs.signalbar);
+		((TextView)findViewById(R.id.network_type_value)).setText(rs.network_type);
+		((TextView)findViewById(R.id.network_provider_value)).setText(rs.network_provider);
+		((TextView)findViewById(R.id.ppp_status_value)).setText(rs.ppp_status);
+		((TextView)findViewById(R.id.modem_main_state_value)).setText(rs.modem_main_state);
+		((TextView)findViewById(R.id.sms_unread_count_value)).setText(rs.sms_unread_count);
+		((TextView)findViewById(R.id.wifi_status_value)).setText(rs.wifi_status);
+		((TextView)findViewById(R.id.wifi_access_count_value)).setText(rs.wifi_access_count);
+		((TextView)findViewById(R.id.battery_charging_value)).setText(rs.battery_charging);
+		((TextView)findViewById(R.id.battery_value_value)).setText(rs.battery_value);
+		((TextView)findViewById(R.id.new_message_value)).setText(rs.new_message);
+		((TextView)findViewById(R.id.message_status_value)).setText(rs.message_status);
+		((TextView)findViewById(R.id.login_info_value)).setText(rs.login_info);
+		((TextView)findViewById(R.id.host_phone_value)).setText(rs.host_phone);
+		((TextView)findViewById(R.id.wan_ipaddr_value)).setText(rs.wan_ipaddr);
+		((TextView)findViewById(R.id.dns_mode_value)).setText(rs.dns_mode);
+		((TextView)findViewById(R.id.prefer_dns_manual_value)).setText(rs.prefer_dns_manual);
+		((TextView)findViewById(R.id.standby_dns_manual_value)).setText(rs.standby_dns_manual);
+		((TextView)findViewById(R.id.prefer_dns_auto_value)).setText(rs.prefer_dns_auto);
+		((TextView)findViewById(R.id.standby_dns_auto_value)).setText(rs.standby_dns_auto);
+		((TextView)findViewById(R.id.SSID1_value)).setText(rs.SSID1);
+		((TextView)findViewById(R.id.Channel_value)).setText(rs.Channel);
+		((TextView)findViewById(R.id.EncrypType_value)).setText(rs.EncrypType);
+		((TextView)findViewById(R.id.AuthMode_value)).setText(rs.AuthMode);
+		((TextView)findViewById(R.id.WscModeOption_value)).setText(rs.WscModeOption);
+		((TextView)findViewById(R.id.AuthMode_tmp_value)).setText(rs.AuthMode_tmp);
+		((TextView)findViewById(R.id.lan_ipaddr_value)).setText(rs.lan_ipaddr);
+		((TextView)findViewById(R.id.lan_netmask_value)).setText(rs.lan_netmask);
+		((TextView)findViewById(R.id.dhcpEnabled_value)).setText(rs.dhcpEnabled);
+		((TextView)findViewById(R.id.sw_outer_version_value)).setText(rs.sw_outer_version);
+		((TextView)findViewById(R.id.hardware_version_value)).setText(rs.hardware_version);
+		((TextView)findViewById(R.id.pin_status_value)).setText(rs.pin_status);
+		((TextView)findViewById(R.id.lucknum_value)).setText(rs.lucknum);
+}
     
-    public class RouterTask extends AsyncTask<String, Integer, String>{
+    public class RouterTask extends AsyncTask<String, Integer, RouterStatus>{
     	
     	private FullscreenActivity activity;
     	
@@ -182,21 +218,24 @@ public class FullscreenActivity extends Activity implements OnClickListener{
     	}
     	
     	@Override
-    	protected String doInBackground(String... params) {
+    	protected RouterStatus doInBackground(String... params) {
     		SB007z sb007z = new SB007z();
-    		String s = "";
+			RouterStatus rs = null;
     		try {
-				RouterStatus rs = sb007z.doGetRouterStatus();
-				s = rs.pppStatus ? getResources().getString(R.string.text_ppp_connected) : getResources().getString(R.string.text_ppp_disconnected);  
+				rs = sb007z.doGetRouterStatus();
 			} catch (IOException ioex) {
-				return getResources().getString(R.string.text_ppp_unknown);
+				return null;
 			}
-    		return s;
+    		return rs;
     	}
 
     	@Override
-    	protected void onPostExecute(String s) {
-			activity.pppStatusView.setText(s);
+    	protected void onPostExecute(RouterStatus rs) {
+			if (rs != null) {
+				String s = rs.pppStatus ? getResources().getString(R.string.text_ppp_connected) : getResources().getString(R.string.text_ppp_disconnected);
+				this.activity.pppStatusView.setText(s);
+				this.activity.dispRouterStatus(rs);
+			}
 			//this.activity.setProgressBarIndeterminateVisibility(false);
   			this.activity.refreshMenuItem.setVisible(true);
 			this.activity.executingMenuItem.setVisible(false);

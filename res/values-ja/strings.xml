@@ -16,5 +16,38 @@
 	<string name="notify_content_text">切断を検知したため、再接続します。</string>
 	<string name="actionbar_setting">設定変更</string>
 	<string name="actionbar_refresh">ルータ状態取得</string>
-	
+	<string name="text_signalbar_label">signalbar</string>
+	<string name="text_network_type_label">network_type</string>
+	<string name="text_network_provider_label">network_provider</string>
+	<string name="text_ppp_status_label">ppp_status</string>
+	<string name="text_modem_main_state_label">modem_main_state</string>
+	<string name="text_sms_unread_count_label">sms_unread_count</string>
+	<string name="text_wifi_status_label">wifi_status</string>
+	<string name="text_wifi_access_count_label">wifi_access_count</string>
+	<string name="text_battery_charging_label">battery_charging</string>
+	<string name="text_battery_value_label">battery_value</string>
+	<string name="text_new_message_label">new_message</string>
+	<string name="text_message_status_label">message_status</string>
+	<string name="text_login_info_label">login_info</string>
+	<string name="text_host_phone_label">host_phone</string>
+	<string name="text_wan_ipaddr_label">wan_ipaddr</string>
+	<string name="text_dns_mode_label">dns_mode</string>
+	<string name="text_prefer_dns_manual_label">prefer_dns_manual</string>
+	<string name="text_standby_dns_manual_label">standby_dns_manual</string>
+	<string name="text_prefer_dns_auto_label">prefer_dns_auto</string>
+	<string name="text_standby_dns_auto_label">standby_dns_auto</string>
+	<string name="text_SSID1_label">SSID1</string>
+	<string name="text_Channel_label">Channel</string>
+	<string name="text_EncrypType_label">EncrypType</string>
+	<string name="text_AuthMode_label">AuthMode</string>
+	<string name="text_WscModeOption_label">WscModeOption</string>
+	<string name="text_AuthMode_tmp_label">AuthMode_tmp</string>
+	<string name="text_lan_ipaddr_label">lan_ipaddr</string>
+	<string name="text_lan_netmask_label">lan_netmask</string>
+	<string name="text_dhcpEnabled_label">dhcpEnabled</string>
+	<string name="text_sw_outer_version_label">sw_outer_version</string>
+	<string name="text_hardware_version_label">hardware_version</string>
+	<string name="text_pin_status_label">pin_status</string>
+	<string name="text_lucknum_label">lucknum</string>
+
 </resources>
